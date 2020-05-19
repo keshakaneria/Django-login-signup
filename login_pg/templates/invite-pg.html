@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Invite</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="wrapper1" >
+			<div class="container">
+				<p style="font-size: 30px;"><u>Invitation</u></p><br>
+				<form action="#" method="post">
+					<!-- Always required to prevent Cross-Site Request Forgery Attacks -->
+					{% csrf_token %}
+					<!-- variable 'inv' rendered from views.py -->
+					{{ inv }}
+					<br><br>
+					<input type="submit" value="Invite" id="submit">
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
